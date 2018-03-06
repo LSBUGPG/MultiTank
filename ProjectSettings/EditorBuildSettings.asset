@@ -4,4 +4,10 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Lobby.unity
+    guid: 5900747fb51ba08458720a15142bbd9d
+  - enabled: 1
+    path: Assets/MultiTank.unity
+    guid: 4019e3beb6709304b831c983c4698e61
