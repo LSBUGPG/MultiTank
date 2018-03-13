@@ -2,7 +2,7 @@
 
 ## How to make a multi-player game in Unity
 
-My aim is to learn how to build a multi-player game in Unity with a lobby and game.
+My aim is to learn how to build a multi-player game in Unity with lobby and game sections.
 
 ## Self-assessment
 
