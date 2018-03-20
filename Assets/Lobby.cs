@@ -47,6 +47,11 @@ public class Lobby : MonoBehaviour
         ChangeScreen(enterAddressScreen);
     }
 
+    public void SetConnectionAddress(string address)
+    {
+        networkLobbyManager.networkAddress = address;
+    }
+
     public void Join()
     {
         networkClient = networkLobbyManager.StartClient();
