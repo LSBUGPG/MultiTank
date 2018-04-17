@@ -8,6 +8,7 @@ public class Lobby : MonoBehaviour
     public GameObject connectionOptions;
     public LobbyScreen lobbyScreen;
     public GameObject enterAddressScreen;
+    public GameObject connectingScreen;
     NetworkLobbyManager networkLobbyManager;
     NetworkClient networkClient;
     List<GameObject> screens;
@@ -19,6 +20,7 @@ public class Lobby : MonoBehaviour
         screens.Add(connectionOptions);
         screens.Add(lobbyScreen.gameObject);
         screens.Add(enterAddressScreen);
+        screens.Add(connectingScreen);
 
         ChangeScreen(connectionOptions);
     }
@@ -55,8 +57,14 @@ public class Lobby : MonoBehaviour
     public void Join()
     {
         networkClient = networkLobbyManager.StartClient();
-        ChangeScreen(lobbyScreen.gameObject);
+        ChangeScreen(connectingScreen);
         lobbyScreen.SetTitle("Player lobby");
+    }
+
+    public void CancelConnect()
+    {
+        networkClient = null;
+        ChangeScreen(connectionOptions);
     }
 
     public void Disconnect()
